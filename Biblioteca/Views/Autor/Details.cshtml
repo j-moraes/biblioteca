@@ -1,0 +1,36 @@
+﻿@model Biblioteca.Models.AutoresModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>AutoresModel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nacionalidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nacionalidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Perfil)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Perfil)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

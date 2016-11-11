@@ -1,0 +1,62 @@
+﻿@model Biblioteca.Models.GerenciamentoAcervoModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>GerenciamentoAcervoModel</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataRetirada)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataRetirada)
+            @Html.ValidationMessageFor(model => model.DataRetirada)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataDevolucao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDevolucao)
+            @Html.ValidationMessageFor(model => model.DataDevolucao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.saida)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.saida)
+            @Html.ValidationMessageFor(model => model.saida)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.observacao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.observacao)
+            @Html.ValidationMessageFor(model => model.observacao)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

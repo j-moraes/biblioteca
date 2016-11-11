@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Biblioteca.Models.EditoraModel>
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastro</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+
+
+
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Procurar por Editoras:@Html.TextBox("Pesquisar")
+        <input type="submit" value="pesquisar" />
+    </p>
+}
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

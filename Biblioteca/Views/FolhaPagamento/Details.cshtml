@@ -1,0 +1,36 @@
+﻿@model Biblioteca.Models.FolhaPagamentoModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>FolhaPagamentoModel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Salario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Salario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataAdmissao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataAdmissao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ativo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ativo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,43 @@
+﻿@model Biblioteca.Models.GerenciamentoAcervoModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>GerenciamentoAcervoModel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataRetirada)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataRetirada)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataDevolucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataDevolucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.saida)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.saida)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.observacao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.observacao)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

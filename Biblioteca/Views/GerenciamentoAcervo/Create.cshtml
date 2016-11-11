@@ -1,0 +1,78 @@
+﻿@model Biblioteca.Models.GerenciamentoAcervoModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>GerenciamentoAcervoModel</legend>
+        <div>
+            @Html.Label("Nome do Usuario")
+            
+            @Html.DropDownListFor(model => model.usuario, (IEnumerable<SelectListItem>)ViewBag.Usuarios, "Selecione um Usuário") 
+            @Html.ValidationMessageFor(model => model.usuario)
+
+        </div>
+        <div>
+            @Html.Label("Descricao do Acervo")
+            @Html.DropDownList("Acervos", String.Empty)
+
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataRetirada)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataRetirada)
+            @Html.ValidationMessageFor(model => model.DataRetirada)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataDevolucao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDevolucao)
+            @Html.ValidationMessageFor(model => model.DataDevolucao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.saida)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.saida)
+            @Html.ValidationMessageFor(model => model.saida)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.observacao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.observacao)
+            @Html.ValidationMessageFor(model => model.observacao)
+        </div>
+        <div class="editor-label">
+            @Html.Label("Usuario")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.usuarioId, (IEnumerable<SelectListItem>)ViewBag.Usuarios, "Selecione")
+            @Html.ValidationMessageFor(model => model.usuarioId)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

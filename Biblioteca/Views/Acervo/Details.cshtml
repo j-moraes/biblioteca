@@ -1,0 +1,64 @@
+﻿@model Biblioteca.Models.AcervoModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>AcervoModel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descricao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ano)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ano)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Estoque)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Estoque)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Genero)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Genero)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Edicao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Edicao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Volume)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Volume)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Paginas)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Paginas)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
